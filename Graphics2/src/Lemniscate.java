@@ -113,24 +113,44 @@ public class Lemniscate implements Drawable
         dT = dstep / (1. * height);
         double x1 = -1.0 * Math.sqrt(2);
         double x2 = Math.sqrt(2);
-        double curX = x1;
-        double curY = fX(x1);
-        for(double i = x1 + dT; i <= x2; i += dT)
+        int curX = 0;
+        int curY = 0;
+        for(double i = 0; i >= x1; i -= dT)
         {
-            double x = i;
-            double y = fX(i);
-            if((curX != i || curY != y) && ((int)(x / dstep) > -x0) && ((int)(x / dstep) < width - x0))
+            int iX = (int)(i / dstep);
+            int iY = (int)fX(i);
+            if((curX != iX || curY != iY))
             {
-                if((height > y0 - y) && (y < y0))
+                while(Math.abs(curX - iX) != 0)
                 {
-                    image.setRGB(x0 + (int)(x / dstep), y0 - (int)y, Color.blue.getRGB());
+                    curX--;
+                    drawPixel(curX, curY);
+                    drawPixel(curX, -curY);
                 }
-                if((height > y0 + y) && (-y < y0))
+                drawPixel(iX, iY);
+                drawPixel(iX, -iY);
+                curX = iX;
+                curY = iY;
+            }
+        }
+        curX = 0;
+        curY = 0;
+        for(double i = 0; i <= x2; i += dT)
+        {
+            int iX = (int)(i / dstep);
+            int iY = (int)fX(i);
+            if((curX != iX || curY != iY))
+            {
+                while(Math.abs(curX - iX) != 0)
                 {
-                    image.setRGB(x0 + (int)(x / dstep), y0 + (int)y, Color.blue.getRGB());
+                    curX++;
+                    drawPixel(curX, curY);
+                    drawPixel(curX, -curY);
                 }
-                curX = x;
-                curY = y;
+                drawPixel(iX, iY);
+                drawPixel(iX, -iY);
+                curX = iX;
+                curY = iY;
             }
         }
         return image;
@@ -259,4 +279,21 @@ public class Lemniscate implements Drawable
     {
         return (Math.sqrt(Math.sqrt(a*a*a*a + 4 * x * x * a * a) - x * x - a * a) / dstep);
     }
+
+    /**
+     * Function for drawing pixels
+     * @param x is coordinate X
+     * @param y is coordinate Y
+     */
+    private void drawPixel(int x, int y)
+    {
+        if((x > -x0) && (x < width - x0))
+        {
+            if((height > y0 - y) && (y < y0))
+            {
+                image.setRGB(x0 + x, y0 - y, Color.blue.getRGB());
+            }
+        }
+    }
+
 }
