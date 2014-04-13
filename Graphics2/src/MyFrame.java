@@ -18,12 +18,6 @@ public class MyFrame extends JFrame
     /** Title of the info */
     private static final String TITLEINFO = "Info";
 
-    /** Title of the message about entering side of the square */
-    private static final String ENTERSIDE = "Enter the side of the square";
-
-    /** Message with info about bad size */
-    private static final String BADSIZE = "Bad size!";
-
     /** Message with information about the developer */
     private static final String INFO = "Made by Andrey Alexandrov";
 
@@ -72,9 +66,6 @@ public class MyFrame extends JFrame
     /** Button to reset */
     private JButton resetButton = null;
 
-    /** Button "Draw square" */
-    private JButton squareButton = null;
-
     /** Button "Draw parametric function" */
     private JButton paramFuncButton = null;
 
@@ -111,9 +102,6 @@ public class MyFrame extends JFrame
 
     /** Submenu in the "File" */
     private JMenuItem exit = null;
-
-    /** Submenu in the "Draw". Drawing green square */
-    private JMenuItem drawSquare = null;
 
     /** Submenu in the "Draw". Drawing parametric function */
     private JMenuItem drawPFunc = null;
@@ -161,6 +149,7 @@ public class MyFrame extends JFrame
         this.setMinimumSize(minFrameSize);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         initDrawPanel();
+        myCanvas.initSizeAndMouse();
         initMenuBar();
         initToolBar();
         this.setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);
@@ -179,7 +168,6 @@ public class MyFrame extends JFrame
             }
         });
         this.setVisible(true);
-        myCanvas.initSizeAndMouse();
     }
 
     /** Initiate panel */
@@ -332,10 +320,7 @@ public class MyFrame extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                //k = 5;
-                coeff.put("k", k);
-                myCanvas.updateObject(coeff);
-                coeff.clear();
+                updateZoom(k);
             }
         });
         minusButton.addActionListener(new ActionListener()
@@ -343,10 +328,7 @@ public class MyFrame extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                //k = -5;
-                coeff.put("k", -k);
-                myCanvas.updateObject(coeff);
-                coeff.clear();
+                updateZoom(-k);
             }
         });
         resetButton.addActionListener(new ActionListener() {
@@ -491,6 +473,42 @@ public class MyFrame extends JFrame
             wheelScale = isWheelScale.isSelected();
             myCanvas.setDragAndDrop(dragAndDrop);
             myCanvas.setWheelScale(wheelScale);
+        }
+    }
+
+    /**
+     * Update's zoom
+     * @param k is scale coefficient
+     */
+    public void updateZoom(int k)
+    {
+        int width = myCanvas.getWidth();
+        int height = myCanvas.getHeight();
+        int x0 = myCanvas.getX0();
+        int y0 = myCanvas.getY0();
+        int minZoom = myCanvas.getMinZoomCoeff();
+        int curZoom = myCanvas.getCurrZoom();
+        if(curZoom + k >= minZoom)
+        {
+            coeff.put("k", k);
+            if(width / 2 - x0 < 0)
+            {
+                coeff.put("x0", x0 + (x0 - width / 2) * k / curZoom);
+            }
+            if(width / 2 - x0 > 0)
+            {
+                coeff.put("x0", x0 - (width / 2 - x0) * k / curZoom);
+            }
+            if(height / 2 - y0 < 0)
+            {
+                coeff.put("y0", y0 + (y0 - height / 2) * k / curZoom);
+            }
+            if(height / 2 - y0 > 0)
+            {
+                coeff.put("y0", y0 - (height / 2 - y0) * k / curZoom);
+            }
+            myCanvas.updateObject(coeff);
+            coeff.clear();
         }
     }
 }

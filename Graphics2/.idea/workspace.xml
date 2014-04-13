@@ -4,18 +4,18 @@
     <list default="true" id="58556eb7-10b6-404a-b1c4-cac65ffbc648" name="Default" comment="" />
     <ignored path="Graphics1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/PFunc.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1396586874715" ignored="false" />
-    <file path="/MyFrame.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1396586511528" ignored="false" />
-    <file path="/MyCanvas.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1396586968917" ignored="false" />
+    <file path="/PFunc.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397327658459" ignored="false" />
+    <file path="/MyFrame.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397370424525" ignored="false" />
+    <file path="/MyCanvas.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397371414609" ignored="false" />
     <file path="/fragment.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397232262980" ignored="false" />
     <file path="/Square.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1395998436450" ignored="false" />
     <file path="/DrawableType.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1395983397926" ignored="false" />
-    <file path="/Drawable.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1395999938324" ignored="false" />
+    <file path="/Drawable.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397370327039" ignored="false" />
     <file path="D:/nsu_graphics1BI/Graphics1/src/PFunc.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1396000312633" ignored="false" />
     <file path="D:/nsu_graphics1BI/Graphics1/src/Drawable.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1395999953326" ignored="false" />
     <file path="D:/nsu_graphics1BI/Graphics1/src/MyFrame.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1396000029695" ignored="false" />
     <file path="D:/nsu_graphics1BI/Graphics1/src/MyCanvas.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1396000097761" ignored="false" />
-    <file path="/Lemniscate.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397235737469" ignored="false" />
+    <file path="/Lemniscate.java" changelist="58556eb7-10b6-404a-b1c4-cac65ffbc648" time="1397370358963" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,16 +89,35 @@
       <file leaf-file-name="MyFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="462" column="73" selection-start="14447" selection-end="14447" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="490" column="35" selection-start="15603" selection-end="15603" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#9110#9286#0" expanded="true" />
+                <element signature="e#9275#9276#0" expanded="true" />
+                <element signature="e#9327#9504#0" expanded="true" />
+                <element signature="e#9493#9494#0" expanded="true" />
+                <element signature="e#9545#9704#0" expanded="true" />
+                <element signature="e#9693#9694#0" expanded="true" />
+                <element signature="e#9749#9907#0" expanded="true" />
+                <element signature="e#9896#9897#0" expanded="true" />
+                <element signature="e#9953#10112#0" expanded="true" />
+                <element signature="e#10101#10102#0" expanded="true" />
+                <element signature="e#10153#10328#0" expanded="true" />
+                <element signature="e#10317#10318#0" expanded="true" />
+                <element signature="e#10372#10529#0" expanded="true" />
+                <element signature="e#10518#10519#0" expanded="true" />
+                <element signature="e#10569#10730#0" expanded="true" />
+                <element signature="e#10719#10720#0" expanded="true" />
+                <element signature="e#10770#10939#0" expanded="true" />
+                <element signature="e#10928#10929#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lemniscate.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Lemniscate.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lemniscate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="30" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.47004607">
+            <state line="153" column="56" selection-start="3937" selection-end="3937" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,7 +137,7 @@
       <file leaf-file-name="PFunc.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PFunc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="319" column="58" selection-start="8234" selection-end="8234" vertical-scroll-proportion="0.0">
+            <state line="368" column="7" selection-start="9612" selection-end="9612" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,17 +155,21 @@
       <file leaf-file-name="Drawable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Drawable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+            <state line="61" column="30" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyCanvas.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyCanvas.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="50" selection-start="5345" selection-end="5345" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="251" column="87" selection-start="6668" selection-end="6668" vertical-scroll-proportion="0.3686636">
+              <folding>
+                <element signature="e#6316#7950#0" expanded="true" />
+                <element signature="e#6737#6754#0" expanded="true" />
+                <element signature="e#7931#7932#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,17 +200,17 @@
         <option value="$PROJECT_DIR$/src/DrawableType.java" />
         <option value="$PROJECT_DIR$/src/Square.java" />
         <option value="$PROJECT_DIR$/src/Drawable.java" />
-        <option value="$PROJECT_DIR$/src/MyFrame.java" />
         <option value="$PROJECT_DIR$/src/PFunc.java" />
-        <option value="$PROJECT_DIR$/src/MyCanvas.java" />
+        <option value="$PROJECT_DIR$/src/MyFrame.java" />
         <option value="$PROJECT_DIR$/src/Lemniscate.java" />
+        <option value="$PROJECT_DIR$/src/MyCanvas.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -216,6 +239,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,21 +275,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="OverrideImplement.combined" value="true" />
-    <property name="recentsLimit" value="5" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -321,19 +344,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -359,6 +369,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -456,12 +479,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21635434" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -472,16 +496,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11439394" sideWeight="0.78364563" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21635434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11398176" sideWeight="0.78364563" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21635434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -565,7 +588,26 @@
     <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="302" column="22" selection-start="8514" selection-end="8514" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#9110#9286#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9327#9504#0" expanded="true" />
+            <element signature="e#9493#9494#0" expanded="true" />
+            <element signature="e#9545#9704#0" expanded="true" />
+            <element signature="e#9693#9694#0" expanded="true" />
+            <element signature="e#9749#9907#0" expanded="true" />
+            <element signature="e#9896#9897#0" expanded="true" />
+            <element signature="e#9953#10112#0" expanded="true" />
+            <element signature="e#10101#10102#0" expanded="true" />
+            <element signature="e#10153#10328#0" expanded="true" />
+            <element signature="e#10317#10318#0" expanded="true" />
+            <element signature="e#10372#10529#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
+            <element signature="e#10569#10730#0" expanded="true" />
+            <element signature="e#10719#10720#0" expanded="true" />
+            <element signature="e#10770#10939#0" expanded="true" />
+            <element signature="e#10928#10929#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -579,7 +621,11 @@
     <entry file="file://$PROJECT_DIR$/src/MyCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="19" selection-start="2273" selection-end="2273" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#6316#7950#0" expanded="true" />
+            <element signature="e#6737#6754#0" expanded="true" />
+            <element signature="e#7931#7932#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -621,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Drawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
@@ -635,32 +674,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/Drawable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="50" selection-start="5345" selection-end="5345" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="462" column="73" selection-start="14447" selection-end="14447" vertical-scroll-proportion="0.0">
+        <state line="61" column="30" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PFunc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="319" column="58" selection-start="8234" selection-end="8234" vertical-scroll-proportion="0.0">
+        <state line="368" column="7" selection-start="9612" selection-end="9612" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="490" column="35" selection-start="15603" selection-end="15603" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#9110#9286#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9327#9504#0" expanded="true" />
+            <element signature="e#9493#9494#0" expanded="true" />
+            <element signature="e#9545#9704#0" expanded="true" />
+            <element signature="e#9693#9694#0" expanded="true" />
+            <element signature="e#9749#9907#0" expanded="true" />
+            <element signature="e#9896#9897#0" expanded="true" />
+            <element signature="e#9953#10112#0" expanded="true" />
+            <element signature="e#10101#10102#0" expanded="true" />
+            <element signature="e#10153#10328#0" expanded="true" />
+            <element signature="e#10317#10318#0" expanded="true" />
+            <element signature="e#10372#10529#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
+            <element signature="e#10569#10730#0" expanded="true" />
+            <element signature="e#10719#10720#0" expanded="true" />
+            <element signature="e#10770#10939#0" expanded="true" />
+            <element signature="e#10928#10929#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lemniscate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="30" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.47004607">
+        <state line="153" column="56" selection-start="3937" selection-end="3937" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="87" selection-start="6668" selection-end="6668" vertical-scroll-proportion="0.3686636">
+          <folding>
+            <element signature="e#6316#7950#0" expanded="true" />
+            <element signature="e#6737#6754#0" expanded="true" />
+            <element signature="e#7931#7932#0" expanded="true" />
           </folding>
         </state>
       </provider>

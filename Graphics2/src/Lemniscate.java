@@ -15,7 +15,7 @@ public class Lemniscate implements Drawable
     BufferedImage image = null;
 
     /** Scale coefficient */
-    private int coeff = 20;
+    private int curZoom = 20;
 
     /** Offset axis Y */
     private int kU = 0;
@@ -42,12 +42,12 @@ public class Lemniscate implements Drawable
     private int height = 0;
 
     /** For correct drawing */
-    private double dstep = 1. / coeff;
+    private double dstep = 1. / curZoom;
 
     /** Delta t */
     private double dT = 0;
 
-    /** Default value of coeff. Need for correct reset */
+    /** Default value of curZoom. Need for correct reset */
     private int defCoeff = 20;
 
 
@@ -75,7 +75,7 @@ public class Lemniscate implements Drawable
     @Override
     public BufferedImage paintFigure()
     {
-        dstep = 1. / coeff;
+        dstep = 1. / curZoom;
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         x0 += kL;
         y0 += kU;
@@ -94,21 +94,21 @@ public class Lemniscate implements Drawable
                 image.setRGB(x0, j, Color.red.getRGB());
             }
         }
-        for(int i = x0 + coeff; i <= width; i += coeff)
+        for(int i = x0 + curZoom; i <= width; i += curZoom)
         {
-            drawCoordinateStroke(i, y0 - coeff / 5, i, y0 + coeff / 5);
+            drawCoordinateStroke(i, y0 - curZoom / 5, i, y0 + curZoom / 5);
         }
-        for(int i = x0 - coeff; i >= 0; i -= coeff)
+        for(int i = x0 - curZoom; i >= 0; i -= curZoom)
         {
-            drawCoordinateStroke(i, y0 - coeff / 5, i, y0 + coeff / 5);
+            drawCoordinateStroke(i, y0 - curZoom / 5, i, y0 + curZoom / 5);
         }
-        for(int i = y0 + coeff; i <= height; i += coeff)
+        for(int i = y0 + curZoom; i <= height; i += curZoom)
         {
-            drawCoordinateStroke(x0 - coeff / 5, i, x0 + coeff / 5, i);
+            drawCoordinateStroke(x0 - curZoom / 5, i, x0 + curZoom / 5, i);
         }
-        for(int i = y0 - coeff; i >= 0; i -= coeff)
+        for(int i = y0 - curZoom; i >= 0; i -= curZoom)
         {
-            drawCoordinateStroke(x0 - coeff / 5, i, x0 + coeff / 5, i);
+            drawCoordinateStroke(x0 - curZoom / 5, i, x0 + curZoom / 5, i);
         }
         dT = dstep / (1. * height);
         double x1 = -1.0 * Math.sqrt(2);
@@ -153,6 +153,8 @@ public class Lemniscate implements Drawable
                 curY = iY;
             }
         }
+        kL = 0;
+        kU = 0;
         return image;
     }
 
@@ -163,21 +165,7 @@ public class Lemniscate implements Drawable
     @Override
     public void setK(int k)
     {
-        if(k > 0)
-        {
-            this.coeff += k;
-        }
-        if(k < 0)
-        {
-            if(this.coeff + k >= 10)
-            {
-                this.coeff += k;
-            }
-            else
-            {
-                this.coeff = 10;
-            }
-        }
+        this.curZoom += k;
     }
 
     /**
@@ -246,7 +234,7 @@ public class Lemniscate implements Drawable
     @Override
     public void reset()
     {
-        coeff = defCoeff;
+        curZoom = defCoeff;
     }
 
     /**
@@ -296,4 +284,12 @@ public class Lemniscate implements Drawable
         }
     }
 
+    /**
+     * @see Drawable
+     * @return zoom's coefficient
+     */
+    public int getCurZoom()
+    {
+        return curZoom;
+    }
 }

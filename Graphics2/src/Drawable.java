@@ -57,4 +57,9 @@ public interface Drawable
      * Reset image
      */
     public void reset();
+
+    /**
+     * Gets zoom's coefficient
+     */
+    public int getCurZoom();
 }

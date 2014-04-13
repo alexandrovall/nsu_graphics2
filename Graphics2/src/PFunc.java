@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 /**
  * Created by Андрей on 24.03.14.
@@ -12,7 +11,7 @@ public class PFunc implements Drawable
     BufferedImage image = null;
 
     /** Scale coefficient */
-    private int coeff = 20;
+    private int curZoom = 20;
 
     /** Offset axis Y */
     private int kU = 0;
@@ -39,12 +38,12 @@ public class PFunc implements Drawable
     private int height = 0;
 
     /** For correct drawing */
-    private double dstep = 1. / coeff;
+    private double dstep = 1. / curZoom;
 
     /** Delta t */
     private double dT = 0;
 
-    /** Default value of coeff. Need for correct reset */
+    /** Default value of curZoom. Need for correct reset */
     private int defCoeff = 20;
 
     /**
@@ -81,7 +80,7 @@ public class PFunc implements Drawable
     @Override
     public BufferedImage paintFigure()
     {
-        dstep = 1. / coeff;
+        dstep = 1. / curZoom;
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         x0 += kL;
         y0 += kU;
@@ -100,23 +99,23 @@ public class PFunc implements Drawable
                 image.setRGB(x0, j, Color.red.getRGB());
             }
         }
-        for(int i = x0 + coeff; i <= width; i += coeff)
+        for(int i = x0 + curZoom; i <= width; i += curZoom)
         {
-            drawCoordinateStroke(i, y0 - coeff / 5, i, y0 + coeff / 5);
+            drawCoordinateStroke(i, y0 - curZoom / 5, i, y0 + curZoom / 5);
         }
-        for(int i = x0 - coeff; i >= 0; i -= coeff)
+        for(int i = x0 - curZoom; i >= 0; i -= curZoom)
         {
-            drawCoordinateStroke(i, y0 - coeff / 5, i, y0 + coeff / 5);
+            drawCoordinateStroke(i, y0 - curZoom / 5, i, y0 + curZoom / 5);
         }
-        for(int i = y0 + coeff; i <= height; i += coeff)
+        for(int i = y0 + curZoom; i <= height; i += curZoom)
         {
-            drawCoordinateStroke(x0 - coeff / 5, i, x0 + coeff / 5, i);
+            drawCoordinateStroke(x0 - curZoom / 5, i, x0 + curZoom / 5, i);
         }
-        for(int i = y0 - coeff; i >= 0; i -= coeff)
+        for(int i = y0 - curZoom; i >= 0; i -= curZoom)
         {
-            drawCoordinateStroke(x0 - coeff / 5, i, x0 + coeff / 5, i);
+            drawCoordinateStroke(x0 - curZoom / 5, i, x0 + curZoom / 5, i);
         }
-        if(((y0 - height) < (-17 * coeff / 2)) && ((width - x0 > coeff) && (-x0 < 4 * coeff / 3)))
+        if(((y0 - height) < (-17 * curZoom / 2)) && ((width - x0 > curZoom) && (-x0 < 4 * curZoom / 3)))
         {
             ymin = -(height - y0) * dstep;
             ty1 = (ymin + Math.sqrt((ymin + 4) * (ymin + 4) - 20)) / 2;
@@ -139,7 +138,7 @@ public class PFunc implements Drawable
 
 
         //t = (-2, -1)
-        if((width - x0 > (4 * coeff / 3)) && ((2 * coeff) < y0))
+        if((width - x0 > (4 * curZoom / 3)) && ((2 * curZoom) < y0))
         {
             xmax = (width - x0) * dstep;
             ymax = y0 * dstep;
@@ -162,7 +161,7 @@ public class PFunc implements Drawable
         }
 
         //t = (-1, 1)
-        if((-x0 < 0) && (((y0 > coeff / 2) && (y0 - height) < 2 * coeff)))
+        if((-x0 < 0) && (((y0 > curZoom / 2) && (y0 - height) < 2 * curZoom)))
         {
             xmin = -x0 * dstep;
             tx1 = Math.sqrt(xmin / (xmin - 1));
@@ -184,7 +183,7 @@ public class PFunc implements Drawable
         }
 
         //t = (1, infinity)
-        if(((width - x0) > coeff) && (y0 > (2 * coeff / 3)))
+        if(((width - x0) > curZoom) && (y0 > (2 * curZoom / 3)))
         {
             xmax = (width - x0) * dstep;
             ymax = y0 * dstep;
@@ -219,17 +218,17 @@ public class PFunc implements Drawable
     {
         if(k > 0)
         {
-            this.coeff += k;
+            this.curZoom += k;
         }
         if(k < 0)
         {
-            if(this.coeff + k >= 10)
+            if(this.curZoom + k >= 10)
             {
-                this.coeff += k;
+                this.curZoom += k;
             }
             else
             {
-                this.coeff = 10;
+                this.curZoom = 10;
             }
         }
     }
@@ -300,7 +299,7 @@ public class PFunc implements Drawable
     @Override
     public void reset()
     {
-        coeff = defCoeff;
+        curZoom = defCoeff;
     }
 
     /**
@@ -362,5 +361,14 @@ public class PFunc implements Drawable
                 }
             }
         }
+    }
+
+    /**
+     * @see Drawable
+     * @return zoom's coefficient
+     */
+    public int getCurZoom()
+    {
+        return curZoom;
     }
 }

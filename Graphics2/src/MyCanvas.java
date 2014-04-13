@@ -35,6 +35,11 @@ public class MyCanvas extends JPanel
     /** For wheel scale */
     private boolean wheelScale = true;
 
+    /** Current zoom */
+    private int curZoom = 0;
+
+    /** Minimal zoom */
+    private static final int MINZOOMCOEFF = 10;
 
     /**
      * Constructor
@@ -122,20 +127,22 @@ public class MyCanvas extends JPanel
                 }
                 if("kU".equals(key))
                 {
-                    y0 -= mapEntry.getValue();
+                    y0 += mapEntry.getValue();
                     object.setKU(mapEntry.getValue());
                 }
                 if("kL".equals(key))
                 {
-                    x0 -= mapEntry.getValue();
+                    x0 += mapEntry.getValue();
                     object.setKL(mapEntry.getValue());
                 }
                 if("x0".equals(key))
                 {
+                    x0 = mapEntry.getValue();
                     object.setX0(mapEntry.getValue());
                 }
                 if("y0".equals(key))
                 {
+                    y0 = mapEntry.getValue();
                     object.setY0(mapEntry.getValue());
                 }
                 if("width".equals(key))
@@ -239,33 +246,34 @@ public class MyCanvas extends JPanel
                     @Override
                     public void mouseWheelMoved(MouseWheelEvent e)
                     {
-                        if(e.getWheelRotation() < 0)
+                        curZoom = object.getCurZoom();
+                        if(object != null)
                         {
-                            if(object != null)
+                            k = e.getWheelRotation() < 0 ? 5 : -5;
+                            Map<String, Integer> scale = new HashMap<String, Integer>();
+                            curZoom = object.getCurZoom();
+                            if(curZoom + k <= MINZOOMCOEFF)
                             {
-                                Map<String, Integer> scale = new HashMap<String, Integer>();
-                                k = 5;
-                                x0 += (getWidth() / 2 - mousePoint.x) / 4;
-                                y0 += (getHeight() / 2 - mousePoint.y) / 4;
-                                scale.put("x0", x0);
-                                scale.put("y0", y0);
-                                scale.put("k", k);
-                                updateObject(scale);
+                                return;
                             }
-                        }
-                        else
-                        {
-                            if(object != null)
+                            if(mousePoint.x - x0 < 0)
                             {
-                                Map<String, Integer> scale = new HashMap<String, Integer>();
-                                k = -5;
-                                x0 += (getWidth() / 2 - mousePoint.x) / 4;
-                                y0 += (getHeight() / 2 - mousePoint.y) / 4;
-                                scale.put("x0", x0);
-                                scale.put("y0", y0);
-                                scale.put("k", k);
-                                updateObject(scale);
+                                scale.put("x0", x0 + (x0 - mousePoint.x) * k / curZoom);
                             }
+                            if(mousePoint.x - x0 > 0)
+                            {
+                                scale.put("x0", x0 - (mousePoint.x - x0) * k / curZoom);
+                            }
+                            if(mousePoint.y - y0 < 0)
+                            {
+                                scale.put("y0", y0 + (y0 - mousePoint.y) * k / curZoom);
+                            }
+                            if(mousePoint.y - y0 > 0)
+                            {
+                                scale.put("y0", y0 - (mousePoint.y - y0) * k / curZoom);
+                            }
+                            scale.put("k", k);
+                            updateObject(scale);
                         }
                     }
                 });
@@ -289,5 +297,48 @@ public class MyCanvas extends JPanel
         y0 = this.getHeight() / 2;
         object = new Lemniscate(x0, y0, this.getWidth(), this.getHeight());
         repaint();
+    }
+
+    /**
+     * Gets center of axis X
+     * @return center of axis X
+     */
+    public int getX0()
+    {
+        return x0;
+    }
+
+    /**
+     * Gets center of axis Y
+     * @return center of axis Y
+     */
+    public int getY0()
+    {
+        return y0;
+    }
+
+    /**
+     * Gets current zoom coefficient
+     * @return current zoom coefficient or Integer.MIN_VALUE(if object == null)
+     */
+    public int getCurrZoom()
+    {
+        if(null != object)
+        {
+            return object.getCurZoom();
+        }
+        else
+        {
+            return Integer.MIN_VALUE;
+        }
+    }
+
+    /**
+     * Gets minimum zoom coefficient
+     * @return minimum zoom coefficient
+     */
+    public int getMinZoomCoeff()
+    {
+        return MINZOOMCOEFF;
     }
 }
